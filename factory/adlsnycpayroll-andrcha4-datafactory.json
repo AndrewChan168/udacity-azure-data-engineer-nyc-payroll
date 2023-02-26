@@ -1,0 +1,9 @@
+{
+	"name": "adlsnycpayroll-andrcha4-datafactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b9404439-468b-4c3d-8bc6-acff531f8618",
+		"tenantId": "8c838b89-b39a-4840-8fba-ed1e51fddfbe"
+	}
+}

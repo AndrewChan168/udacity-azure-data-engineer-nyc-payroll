@@ -1,0 +1,44 @@
+{
+	"name": "Pipeline Aggregate Payroll",
+	"properties": {
+		"activities": [
+			{
+				"name": "Aggregate Payroll Data Flow",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "PayrollAggregateDataFlow",
+						"type": "DataFlowReference",
+						"parameters": {
+							"dataflow_param_fiscalyear": "2021"
+						}
+					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "adlsnycpayrollDataLakeStg",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "adlsnycpayroll-andrcha4-lastintial/dirstaging"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2023-02-26T13:55:00Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
