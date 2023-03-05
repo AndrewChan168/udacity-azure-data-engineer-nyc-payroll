@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adlsnycpayroll-andrcha4-datafactory"
+		},
+		"adlsnycpayrollDataLakeStg_accountKey": {
+			"value": ""
+		},
+		"adlsnycpayrollSQLDB_connectionString": {
+			"value": ""
+		},
+		"adlsnycpayrollSynapse_connectionString": {
+			"value": ""
+		},
+		"adlsnycpayrollDataLakeStg_properties_typeProperties_url": {
+			"value": "https://adlsnycpayrollandrcha4.dfs.core.windows.net/"
+		}
+	}
+}
